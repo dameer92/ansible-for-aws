@@ -1,5 +1,5 @@
 ---
 - ec2_instance:
-    state: restarted
+    state: started
     instance_ids:
       - i-0ded0ade6510c6ff1
