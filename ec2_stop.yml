@@ -1,5 +1,5 @@
 ---  
-- hosts: localhost  
+- hosts: ec2-54-196-39-116.compute-1.amazonaws.com 
   gather_facts: no   
   connection: local
   sudo: no
