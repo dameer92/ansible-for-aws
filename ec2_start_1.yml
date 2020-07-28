@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
-  become: false
-  gather_facts: false
+  gather_facts: no
+  connection: local 
   connection: local
   vars:
     region: us-east-1e
