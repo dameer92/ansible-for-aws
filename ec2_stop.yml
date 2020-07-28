@@ -4,7 +4,7 @@
   connection: local  
   vars:  
     region: us-east-1e   
-    name: AWS-Demo
+    name: all
   tasks:  
     - name: get instance id
       command: aws ec2 describe-instances --filter Name=tag:Name,Values={{ name }} 
