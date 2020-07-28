@@ -3,8 +3,8 @@
   gather_facts: no
   connection: local 
   vars:
-    region: ap-southeast-2
-    name: bamboo-1
+    region: us-east-1e
+    name: AWS-Demo
   tasks:
     - name: get instance id
       instance_lookup:
