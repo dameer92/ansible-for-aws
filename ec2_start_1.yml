@@ -1,26 +1,5 @@
 ---
-- hosts: localhost
-  gather_facts: no
-  connection: local 
-  connection: local
-  vars:
-    region: us-east-1e
-    name: all
-  tasks:
-    - name: get instance id
-      instance_lookup:
-        region: "{{ region }}"
-        tags:
-          Name: "{{ name }}"
-      register: instanceid
-
-    - debug: var=instanceid.instance_ids
-
-    - name: start instance
-      ec2:
-        region: "{{ region }}"
-        instance_ids: "{{ instanceid.instance_ids }}"
-        state: running
-        wait: yes
-      when: instanceid is defined
-
+- ec2_instance:
+    state: restarted
+    instance_ids:
+      - i-0ded0ade6510c6ff1
