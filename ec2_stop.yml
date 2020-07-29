@@ -1,5 +1,5 @@
 ---  
-- instance id: i-0828c0b0f6eb50b7b
+- name: localhost
   gather_facts: no   
   connection: local
   become: yes
