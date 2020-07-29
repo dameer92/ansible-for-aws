@@ -1,5 +1,5 @@
 ---  
-- hosts: ec2-35-153-231-153.compute-1.amazonaws.com
+- hosts: all
   gather_facts: no   
   connection: local
   vars:  
