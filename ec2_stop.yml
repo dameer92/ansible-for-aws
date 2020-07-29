@@ -2,7 +2,6 @@
 - hosts: all
   gather_facts: no   
   connection: local
-  become: yes
   vars:  
     region: us-east-1e   
     name: AWS-Demo
