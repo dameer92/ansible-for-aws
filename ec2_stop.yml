@@ -1,9 +1,8 @@
 ---  
 - hosts: localhost  
   gather_facts: no   
-  connection: local  
   vars:  
-    region: us-east-1e   
+    region: us-east-1
     name: AWS-Demo
   tasks:  
     - name: get instance id
