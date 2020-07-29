@@ -1,5 +1,5 @@
 ---  
-- name: localhost
+- name: ec2-35-153-231-153.compute-1.amazonaws.com
   gather_facts: no   
   connection: local
   become: yes
