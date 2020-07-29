@@ -1,5 +1,5 @@
 ---  
-- hosts: all
+- hosts: 54.90.9.116
   gather_facts: no   
   connection: local
   vars:  
