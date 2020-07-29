@@ -1,5 +1,20 @@
----
-- instance:
-    state: started
-    instance_ids:
-      - i-0ded0ade6510c6ff1
+---  
+- hosts: localhost  
+  gather_facts: no    
+  connection: local 
+  vars:  
+    region: us-east-1e   
+    name: AWS-Demo
+  tasks:  
+    - name: get instance id
+      command: aws ec2 describe-instances --filter Name=tag:Name,Values={{ name }} 
+               --query 'Reservations[0].Instances[0].InstanceId' --output text
+      register: instanceid
+
+    - name: start instance 
+      ec2:  
+        region: "{{ region }}"
+        instance_ids: "{{ instanceid.stdout }}"  
+        state: running
+        wait: yes
+      when: instanceid.stdout!="None"
