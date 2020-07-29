@@ -1,5 +1,5 @@
 ---  
-- hosts: ec2-54-90-9-116.compute-1.amazonaws.com
+- instance id: i-0828c0b0f6eb50b7b
   gather_facts: no   
   connection: local
   become: yes
