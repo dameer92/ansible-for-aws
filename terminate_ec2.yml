@@ -4,7 +4,7 @@
   gather_facts: no    
   vars:  
     #your region  
-    region: us-east-1e   
+    region: all   
   tasks:  
     - name: terminate instances
       ec2:
