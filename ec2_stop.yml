@@ -15,7 +15,7 @@
 
     - debug: var=instanceid.instance_ids
 
-    - name: stoped instance
+    - name: stopped instance
       ec2:
         region: "{{ region }}"
         instance_ids: "{{ instanceid.instance_ids }}"
