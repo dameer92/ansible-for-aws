@@ -19,6 +19,6 @@
       ec2:
         region: "{{ region }}"
         instance_ids: "{{ instanceid.instance_ids }}"
-        state: stoped
+        state: stopped
         wait: yes
       when: instanceid is defined
