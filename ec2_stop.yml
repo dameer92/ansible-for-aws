@@ -3,7 +3,7 @@
   gather_facts: no
   connection: local 
   vars:
-    region: us-east-1e
+    region: us-east-1
     name: RHEL-1
   tasks:
     - name: get instance id
