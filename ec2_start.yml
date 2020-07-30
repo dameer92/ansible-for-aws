@@ -1,5 +1,24 @@
----  
-- ec2_instance:
-    state: started
-    instance_ids:
-      - i-0828c0b0f6eb50b7b
+---
+- hosts: localhost
+  gather_facts: no
+  connection: local 
+  vars:
+    region: us-east-1
+    name: RHEL-1
+  tasks:
+    - name: get instance id
+      instance_lookup:
+        region: "{{ region }}"
+        tags:
+          Name: "{{ name }}"
+      register: instanceid
+
+    - debug: var=instanceid.instance_ids
+
+    - name: started instance
+      ec2:
+        region: "{{ region }}"
+        instance_ids: "{{ instanceid.instance_ids }}"
+        state: started 
+        wait: yes
+      when: instanceid is defined
