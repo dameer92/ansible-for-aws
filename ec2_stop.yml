@@ -3,7 +3,7 @@
   gather_facts: no   
   vars:  
     region: us-east-1
-    name: RHEL-1
+    name: all
   tasks:  
     - name: get instance id
       command: aws ec2 describe-instances --filter Name=tag:Name,Values={{ name }} 
