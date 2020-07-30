@@ -4,7 +4,7 @@
   connection: local 
   vars:
     region: us-east-1e
-    name: all
+    name: RHEL-1
   tasks:
     - name: get instance id
       instance_lookup:
