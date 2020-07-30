@@ -4,6 +4,7 @@
   connection: local 
   vars:
     region: us-east-1e
+    name: all
   tasks:
     - name: get instance id
       instance_lookup:
