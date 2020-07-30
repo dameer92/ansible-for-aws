@@ -3,8 +3,8 @@
   gather_facts: no
   connection: local 
   vars:
-    region: us-east-1
-    name: RHEL-1
+    region: us-east-1e
+    name: all
   tasks:
     - name: get instance id
       instance_lookup:
@@ -15,10 +15,10 @@
 
     - debug: var=instanceid.instance_ids
 
-    - name: started instance
+    - name: start instance
       ec2:
         region: "{{ region }}"
         instance_ids: "{{ instanceid.instance_ids }}"
-        state: started 
+        state: running
         wait: yes
       when: instanceid is defined
