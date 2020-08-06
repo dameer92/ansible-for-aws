@@ -1,6 +1,6 @@
 ---
 - name: create alarm
-  ec2_metric_alarm:
+  ec2_metric_alarm: CPUUtilization
     state: present
     region: us-east-1
     name: "cpu-low"
